@@ -216,6 +216,7 @@ public class Arkanoid {
         game.getBricks().add(new Brick(16, 3));
 
         game.run();
+
     }
 }
 
