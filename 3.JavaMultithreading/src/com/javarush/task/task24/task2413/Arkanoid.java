@@ -208,7 +208,6 @@ public class Arkanoid {
 
         Stand stand = new Stand(10, 30);
         game.setStand(stand);
-        game.ball.start();
 
         game.getBricks().add(new Brick(3, 3));
         game.getBricks().add(new Brick(7, 5));
@@ -216,7 +215,6 @@ public class Arkanoid {
         game.getBricks().add(new Brick(16, 3));
 
         game.run();
-
     }
 }
 

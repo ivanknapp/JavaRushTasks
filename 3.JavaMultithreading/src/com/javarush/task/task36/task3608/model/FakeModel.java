@@ -1,11 +1,15 @@
 package com.javarush.task.task36.task3608.model;
 
 import com.javarush.task.task36.task3608.bean.User;
+import com.javarush.task.task36.task3608.model.service.UserService;
+import com.javarush.task.task36.task3608.model.service.UserServiceImpl;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class FakeModel implements Model {
     private ModelData modelData = new ModelData();
+    private UserService userService = new UserServiceImpl();
 
     @Override
     public void loadUsers() {
@@ -18,5 +22,10 @@ public class FakeModel implements Model {
     @Override
     public ModelData getModelData() {
         return modelData;
+    }
+
+    @Override
+    public void loadDeletedUsers() {
+        throw new UnsupportedOperationException();
     }
 }
